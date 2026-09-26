@@ -66,7 +66,9 @@ def create_red_agent_default():
             name="red_agent_default",
             instruction=RED_DEFAULT_INSTRUCTION,
             app_name="red_agent_default",
-            temperature=0.7,
+            # gpt-5.6-luna only accepts its default temperature (1).
+            # This is also valid for the default gpt-4o-mini path.
+            temperature=1.0,
             model=soft,
         )
         print(
